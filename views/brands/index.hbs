@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here */
+        .yellow-background {
+            position: relative;
+            overflow: hidden;
+            padding: 15px; /* Add padding for spacing */
+            margin-bottom: 20px; /* Add margin for spacing */
+            border-radius: 5px; /* Add border-radius for rounded corners */
+            color: white; /* Set text color to white for better visibility */
+        }
+
+        .yellow-background::before {
+            content: "";
+            
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid mt-4 yellow-background">
+    <h2>Brand Management</h2>
+
+    <a class="btn btn-info mb-2" href="/brand/add">Add new Brand</a>
+    <a class="btn btn-danger mb-2" href="/brand/deleteall" onclick="return confirm('Are you sure to delete all brands?');">Delete all</a>
+
+
+    <div class="table-responsive">
+        <table class="table table-secondary">
+            <thead class="thead-dark">
+            <tr>
+                <th>Brand Name</th>
+                <th>Brand Country</th>
+                <th colspan="2">Menu</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each brands }}
+            <tr>
+                <td>
+                    <a href="/brand/detail/{{ _id }}">
+                        {{ name }}
+                    </a>
+                </td>
+                <td>{{ country }}</td>
+                <td>
+                    <a class="btn btn-warning" href="/brand/edit/{{ _id }}">Edit</a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="/brand/delete/{{ _id }}"
+                       onclick="return confirm('Are you sure to delete this brand?');"
+                    >Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

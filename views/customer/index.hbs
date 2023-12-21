@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop Homepage - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Toy Is You</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Toy Is You online toy store</p>
+                </div>
+            </div>
+            <style>
+    header.bg-dark {
+        background: url('https://allears.net/wp-content/uploads/2018/11/Toy-Story-4-Teaser-Image.jpg') center/cover no-repeat;
+        color: white;
+        text-align: center;
+        padding: 5rem 0; /* You can adjust the padding as needed */
+    }
+
+    header h1 {
+        font-size: 3.5rem; /* You can adjust the font size as needed */
+        margin-bottom: 1rem;
+    }
+
+    header p {
+        font-size: 1.5rem; /* You can adjust the font size as needed */
+        margin-bottom: 0;
+    }
+</style>
+  
+        </header>
+        <!-- Section-->
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {{#each toys }}
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{ image }}" alt="{{ model }}" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{ model }}</h5>
+                            <!-- Product price-->
+                            ${{ price }}
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                       
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
+
+
+        <!-- Footer-->
+       <footer class="py-5 bg-dark">
+    <div class="container text-center text-white">
+        <p class="m-0">Contact Us:</p>
+        <p>Email: toylandisyou@gmail.com</p>
+        <p>Phone: +84 123 456 789</p>
+        
+        <p class="m-0 mt-4">Our Stores:</p>
+        <p>Hanoi Store: 123 Toy Street, Hanoi</p>
+        <p>Ho Chi Minh City Store: 456 Toy Avenue, Ho Chi Minh City</p>
+        <p>Da Nang Store: 789 Toy Lane, Da Nang</p>
+
+        <p class="m-0 mt-4">Copyright &copy; Huy Hoang Website 2023</p>
+    </div>
+</footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="https://w7.pngwing.com/pngs/338/941/png-transparent-buzz-lightyear-youtube-sheriff-woody-logo-pixar-toy-story-3-child-text-logo.png" height="60" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mx-2 active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <div class="sidebar-title">
+            <h2>Menu</h2>
+        </div>
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item"><a href="/brand"><i class="bi bi-box"></i> Brand</a></li>
+            <li class="sidebar-list-item"><a href="/toy"><i class="bi bi-toy"></i> Toy</a></li>
+        </ul>
+    </aside>
+
+    </div>
+
+    <style>
+        /* Add your custom styles here */
+    <style>
+    /* Add your custom styles here */
+    #neubar {
+        background: #fae8d2;
+        box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item .active {
+        border-radius: 6px;
+        background: linear-gradient(145deg, #ffe7ca, #f5d7b2);
+        box-shadow: 4px 4px 8px #ddc1a0, -4px -4px 8px #f7e5cc;
+    }
+
+    #neubar .dropdown-menu a:hover {
+        color: #454545;
+    }
+
+    #neubar .nav-item {
+        margin: auto 4px;
+    }
+
+    #neubar a {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #neubar .dropdown-menu {
+        background: #545454;
+    }
+
+    a.navbar-brand {
+        color: #454545;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Responsive styling for the sidebar */
+    #sidebar {
+        background-color: #343a40;
+        color: white;
+        padding: 1rem;
+        height: 100vh;
+    }
+
+    .sidebar-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .sidebar-list-item {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-list-item a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-list-item i {
+        margin-right: 10px;
+    }
+
+    .sidebar-list-item a:hover {
+        color: #ffd700;
+    }
+
+    /* Responsive styling for tables */
+    #content {
+        padding: 20px;
+    }
+
+    #content h2 {
+        color: #343a40;
+        margin-bottom: 1rem;
+    }
+
+    #content table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #343a40;
+    }
+
+    #content th,
+    #content td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    #content th {
+        background-color: #f8f9fa;
+    }
+</style>
+<style>
+    /* Add your custom styles here */
+    #neubar {
+        background: #fae8d2;
+        box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-item .active {
+        border-radius: 6px;
+        background: linear-gradient(145deg, #ffe7ca, #f5d7b2);
+        box-shadow: 4px 4px 8px #ddc1a0, -4px -4px 8px #f7e5cc;
+    }
+
+    #neubar .dropdown-menu a:hover {
+        color: #454545;
+    }
+
+    #neubar .nav-item {
+        margin: auto 4px;
+    }
+
+    #neubar a {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #neubar .dropdown-menu {
+        background: #545454;
+    }
+
+    a.navbar-brand {
+        color: #454545;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Responsive styling for the sidebar */
+    #sidebar {
+        background-color: #343a40;
+        color: white;
+        padding: 1rem;
+        height: 100vh;
+    }
+
+    .sidebar-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .sidebar-list-item {
+        margin-bottom: 10px;
+    }
+
+    .sidebar-list-item a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-list-item i {
+        margin-right: 10px;
+    }
+
+    .sidebar-list-item a:hover {
+        color: #ffd700;
+    }
+
+    /* Responsive styling for tables */
+    #content {
+        padding: 20px;
+    }
+
+    #content h2 {
+        color: #343a40;
+        margin-bottom: 1rem;
+    }
+
+    #content table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #343a40;
+    }
+
+    #content th,
+    #content td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    #content th {
+        background-color: #f8f9fa;
+    }
+</style>
+
+    </style>
+
+</body>
+
+</html>

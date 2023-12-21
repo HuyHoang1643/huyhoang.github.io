@@ -1,0 +1,39 @@
+<div class="container mt-2">
+    <form action="/toy/edit/{{ toy._id }}" method="post">
+        <h1 class="mb-4">Edit Product</h1>
+
+        <div class="mb-3">
+            <label for="toyName" class="form-label">Product Name:</label>
+            <input type="text" class="form-control" name="name" id="productName" value="{{ toy.name }}" required>
+        </div>
+
+          <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" name="price" id="price" value="{{ toy.price }}" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL:</label>
+            <input type="url" class="form-control" name="image" id="image" value="{{ toy.image }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="color" class="form-label">Color:</label>
+            <input type="text" class="form-control" name="color" id="color" value="{{ toy.color }}" required>
+        </div>
+        <div class="mb-3">
+        <select name="brand">
+      {{#each brands }}
+      <option value="{{ _id }}"> {{ name }}</option>
+      {{/each}}
+   </select>
+        {{#each toys }}
+            <option value="{{_id }}">{{ name }}</option>
+        {{/each}}
+         </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>
