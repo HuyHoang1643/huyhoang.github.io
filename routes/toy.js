@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 var ToyModel = require('../models/ToyModel');
 var BrandModel = require('../models/BrandModel');
-
+var CategoryModel = require('../models/CategoryModel');
 //URL: localhost:3001/mobile
 
 router.get('/', async (req, res) => {
-   var toys = await ToyModel.find({}).populate('brand');
+   var toys = await ToyModel.find({}).populate('brand category');
    //Path: views/mobile/index.hbs
    res.render('toys/index', { toys });
 })
@@ -17,9 +17,13 @@ router.get('/customer', async (req, res) => {
    res.render('toy/list', { toys });
 })
 
+
+
 router.get('/add', async (req, res) => {
    var brands = await BrandModel.find({});
-   res.render('toys/add', { brands });
+   var categories = await CategoryModel.find({});
+   
+   res.render('toys/add', { brands, categories });
 })
 
 router.post('/add', async (req, res) => {

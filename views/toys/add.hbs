@@ -26,6 +26,13 @@
              {{#each brands }}
               <option value="{{ _id }}"> {{ name }}</option>
              {{/each}}
+             
+            </select>
+            <select name="category">
+             {{#each categories }}
+              <option value="{{ _id }}"> {{ name }}</option>
+             {{/each}}
+             
             </select>
             <button type="submit" class="btn btn-primary">Add</button>
         </form>

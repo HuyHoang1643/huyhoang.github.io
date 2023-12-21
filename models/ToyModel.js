@@ -8,6 +8,10 @@ var ToySchema = mongoose.Schema(
     brand: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'brands'
+    },
+    category: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'categories'
     }
    });
 var ToyModel = mongoose.model('toys', ToySchema);

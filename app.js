@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 // 1A. config location of routers
 var toyRouter = require('./routes/toy');
 var brandRouter = require('./routes/brand');
-
+var categoryRouter = require('./routes/category');
 var app = express();
 // 2. config 'mongoose' module
 var mongoose = require('mongoose');
@@ -39,7 +39,7 @@ app.use('/', indexRouter);
 app.use('/toy', toyRouter);
 app.use('/brand', brandRouter);
 app.use('/users', usersRouter);
-
+app.use('/category',categoryRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
